@@ -43,19 +43,36 @@ To add to a repo:
 
 * System dependencies
 
+### For guard make sure the gems added are:
+
+```
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'sqlite3'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0.beta3'
+  gem 'spring', '~> 1.1.3'
+  gem 'guard-rspec', '~> 4.6.0'
+  gem 'rspec-rails', '~> 3.3.2'
+end
+```
+
+
 * Configuration
 
 * Database creation
 
 * Database initialization
 
-* How to run the test suite
+#### How to run the test suite
+`$ bundle exec guard init`
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
-* ...
+* see README_notes for pkill information and Spring
+
 
 
 Please feel free to use a different markup language if you do not plan to run
