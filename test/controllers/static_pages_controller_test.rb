@@ -5,19 +5,19 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home | Zen Blog App"
+    assert_select "title", "Zen Blog"
   end
 
   test "should get help" do
     get :help
     assert_response :success
-    assert_select "title", "Help | Zen Blog App"
+    assert_select "title", "Help | Zen Blog"
   end
 
   test "should get about" do
     get :about
     assert_response :success
-    assert_select "title", "About | Zen Blog App"
+    assert_select "title", "About | Zen Blog"
   end
   
 end
