@@ -53,9 +53,9 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', :git => 'git://github.com/yrgoldteeth/bootstrap-will_paginate.git'
 
 ## Fix for the runtime error
-gem 'therubyracer'
+gem 'therubyracer', '~> 0.11.0'
 ## Fix for irb warnings
-gem 'libv8'
+gem 'libv8', '~> 3.11.8'
 gem 'execjs'
 
 ## For Gravatar
