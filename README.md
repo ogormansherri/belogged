@@ -31,7 +31,6 @@ To deploy to heroku
 
 To create a branch: 
 * git checkout -b nameof-pages
-* git git checkout -b nameof-pages
 
 To add to a repo:
 * git status
