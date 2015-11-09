@@ -10,47 +10,26 @@
   </head>
 
   <body>
-  
-  <nav class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner">
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><div class="mytext"><%= link_to "Zen Blog", root_path %></div></li>
-            <li><%= link_to "Help", '#' %></li>
-            <li><%= link_to "About", '#' %></li>
-            <li><%= link_to "News", '#' %> </li>
-            <li><%= link_to "Log In", '#' %></li>
-            <li><%= link_to "Sign Up Now", '#' %></li>
-            <li><%= link_to "Articles", '#' %></li>
-            <li><%= link_to "New article", '#' %></li>
-            <li><%= link_to "Contact", '#' %></li>
-          </ul>
-        </nav>
-    </div>
-  </nav>
+    <%= render 'layouts/header' %>
 
 <div class="container">
 <!--blog logo and corrections here -->
-<header>Music and more</header>
+<div class="mytext">Music and more</div>
 <%= link_to image_tag("personalblog4.png", :width => 150, :height => 150, :alt => "Blog logo", :crop => :fill, :style => "border: 2px solid purple") %>
 
 <%= yield %>
+
+
+</div>
+
+<%= render 'layouts/footer' %>
 
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%=message_type %>"><%= message %>
 </div>
 <% end %>
 
-
-
 <%= debug(params) if Rails.env.development? %>  <!--does not display debug info to deployed users -->
 
-</div>
-
-<footer>
-        <div class="bloglinks">
-        <p>Design by <a href="http://www.gx2research.com/" target="_blank">geek girl</a> gx2research &copy;2015</p>
-        </div>
-    </footer>
 </body>
 </html>

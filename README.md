@@ -39,7 +39,8 @@ To add to a repo:
 * git commit -m "add a static page folder"
 * git push -u origin static-pages
 
-
+To test:
+`bundle exec rake test `
 
 * System dependencies
 

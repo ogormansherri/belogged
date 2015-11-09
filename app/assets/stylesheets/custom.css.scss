@@ -193,16 +193,23 @@ li a:hover {
 }
 /*New stuff for footer links */
 
+
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+/*  margin-top: 45px; */
+/*  padding-top: 5px; */
   border-top: 1px solid #eaeaea;
   color: #120012;
-  width: 450px;
+  background-color: rgba(218, 112, 214, 0.9);
+  width: 650px;
+  margin-left: 20%;
+  margin-right: 30%;
+  margin-top: 2%;
+  align: right;
   a {
     color: #330033;
     &:hover {
         background:rgba(0, 200, 0, 0.8);
+        color: #000000;
     }
   }
   small {
@@ -214,6 +221,12 @@ footer {
     li {
       float: left;
       margin-left: 15px;
+      a:hover {
+        color:rgb(155, 0, 211);
+        background:rgba(0, 200, 0, 0.8);
+        text-decoration:none;
+        font-weight: bold;
+}
     }
   }
 }
