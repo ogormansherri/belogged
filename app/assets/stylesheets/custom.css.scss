@@ -16,41 +16,15 @@
     /* miscellaneous */
     .debug_dump {
         clear: both;
-        float: left;
-        width: 80%;
-        margin-top: 45px;
+        float: center;
+        width: 60%;
+        margin-top: 105px;
+        margin-left: 200px;
+        position: center;
+        padding-left: 20px;
         @include box_sizing;
     }
 
-/* sidebar */
-
-aside {
-    section.user_info {
-        margin-top: 20px;
-    }
-    section {
-        padding: 10px 0;
-        margin-top: 20px;
-        &:first-child {
-            border: 0;
-            padding-top: 0;
-        }
-        span {
-            display: block;
-            margin-bottom: 3px;
-            line-height: 1;
-        }
-        h1 {
-            font-size: 1.4em;
-            letter-spacing: -1px;
-            margin-bottom: 3px;
-            margin-top: 0px;
-            text-align: left;
-            font-weight: bold;
-            color: #3D003D;
-        }
-    }
-}
 
 .gravatar {
     float: left;
@@ -80,12 +54,18 @@ input {
     background-color: transparent;
     margin-left: 15%;
     margin-right: 15%;
+    box-sizing: border-box;
+   -moz-box-sizing: border-box;
 }
 
 .mycontainer {
-    width: 90%;
+    width: 75%;
     padding: 10px;
+    padding-left: 200px;
+    padding-top: 5px;
+    position: relative;
     background-color: transparent;
+/*    overflow: hidden; */
 }
 
 /* forms for styling error messages */
@@ -95,6 +75,7 @@ input {
     ul {
         color: red;
         margin: 0 0 30px 0;
+        position: absolute;
     }
 }
 
@@ -110,8 +91,9 @@ input {
 
 body {
     padding-top: 60px;
-    padding-left: 11px;
-    background-color: transparent;
+    padding-left: 0px;
+    background: linear-gradient(to top, rgba(0,200,0,0.3), rgba(155,0,211,0.3)) fixed;
+    /*background: linear-gradient(to top, rgba(0, 200, 0, 0.3), rgba(155, 0, 211, 0.3));*/
 }
 
 section {
@@ -197,9 +179,12 @@ li a:hover {
 footer {
 /*  margin-top: 45px; */
 /*  padding-top: 5px; */
+/*  clear: both; */
+  position:relative;
   border-top: 1px solid #eaeaea;
   color: #120012;
-  background-color: rgba(218, 112, 214, 0.9);
+  font-weight: bold;
+/*  background-color: rgba(218, 112, 214, 0.2); */
   width: 650px;
   margin-left: 20%;
   margin-right: 30%;
@@ -263,4 +248,61 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.7em;
+}
+
+/* New stuff for sidebar Right */
+
+#mywrapper {
+    padding: 10px;
+}
+/* make sidebar nav vertical */ 
+
+#sidebar {
+  height: 77%;
+  padding-right: 0;
+  padding-top: -10px;
+  padding-left: 20px;
+  width: 15%;
+  position: absolute;
+  background:#222;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  .nav {
+    width: 100%;
+  }
+  ul li a:hover {
+    color:#A9A9A9;
+    display:block;
+    text-decoration:none;
+    }
+}
+
+/* sidebar */
+
+aside {
+    section.user_info {
+        margin-top: 20px;
+    }
+    section {
+        padding: 10px 0;
+        margin-top: 20px;
+        &:first-child {
+            border: 0;
+            padding-top: 0;
+        }
+        span {
+            display: block;
+            margin-bottom: 3px;
+            line-height: 1;
+        }
+        h1 {
+            font-size: 1.4em;
+            letter-spacing: -1px;
+            margin-bottom: 3px;
+            margin-top: 0px;
+            text-align: left;
+            font-weight: bold;
+            color: #3D003D;
+        }
+    }
 }

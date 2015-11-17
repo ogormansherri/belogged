@@ -10,26 +10,38 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <div class="content"> 
+    
+      <%= render 'layouts/header' %>
+      <div class="large-3 large-pull-9 columns" id="sidebar" role="navigation">
+      <%= render 'layouts/sidebar' %>
+    </div>
+   
+    <div class="mywrapper"></div>
 
-<div class="container">
-<!--blog logo and corrections here -->
-<div class="mytext">Music and more</div>
-<%= link_to image_tag("personalblog4.png", :width => 150, :height => 150, :alt => "Blog logo", :crop => :fill, :style => "border: 2px solid purple") %>
+      <!--NEW-->
+    <div class="large-9 large-pull-3 columns">
+    <div class="myjumbotron">
+    <!--blog logo and corrections here -->
+    <div class="mytext">Music and more</div>
+      <%= link_to image_tag("personalblog4.png", :width => 150, :height => 150, :alt => "Blog logo", :crop => :fill, :style => "border: 2px solid purple") %>
+      <%= yield %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%=message_type %>"><%= message %>
+          </div>
 
-<%= yield %>
+      <% end %>
+      <div class="row">
+        <%= render 'layouts/footer' %>
+      </div>
 
+    </div> <!--myjumbotron-->
+  </div> <!--content-->
 
-</div>
-
-<%= render 'layouts/footer' %>
-
-  <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%=message_type %>"><%= message %>
-</div>
-<% end %>
 
 <%= debug(params) if Rails.env.development? %>  <!--does not display debug info to deployed users -->
 
+
+</div>
 </body>
 </html>
