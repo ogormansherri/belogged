@@ -37,9 +37,13 @@
 
 /* forms for signup */
 
+.myinputcontainer {
+    width: 50%;
+}
+
 input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
-    width: 60%;
+    width: 100%;
     margin-bottom: 15px;
     @include box_sizing;
 }
@@ -75,15 +79,16 @@ input {
     ul {
         color: red;
         margin: 0 0 30px 0;
-        position: absolute;
     }
 }
 
 /* .has-error is new */
 .field_with_errors {
-    @extend .control-group !optional;
-    @extend .error !optional;
+    @extend .has-error;
+    .form-control {
+        color: $state-danger-text;    
     }
+}
 
 
 
@@ -255,14 +260,22 @@ p {
 #mywrapper {
     padding: 10px;
 }
+
+.mytext2 {
+    color: #ffffff;
+    font-size: 1.6em;
+    letter-spacing: -1px;
+    text-align: left;
+    font-weight: bold;
+  }
 /* make sidebar nav vertical */ 
 
 #sidebar {
-  height: 77%;
+  height: 90%;
   padding-right: 0;
-  padding-top: -10px;
+  padding-top: 0px;
   padding-left: 20px;
-  width: 15%;
+  width: 12%;
   position: absolute;
   background:#222;
   box-sizing: border-box;

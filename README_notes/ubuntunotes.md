@@ -39,3 +39,7 @@ Any time something isn’t behaving as expected or a process appears to be
 frozen, it’s a good idea to run ps aux to see what’s going on, and then run 
 kill -15 <pid> or pkill -15 -f <name> to clear things up.
 ```
+
+To reset a password and database entirely: 
+
+`bundle exec rake db:migrate:reset`
