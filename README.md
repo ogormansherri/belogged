@@ -3,13 +3,28 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## To see routes in ruby
+
+`$ bundle exec rake routes`
+
+and
+
+`$ bin/rake routes`
 
 To kill threads that take up memory...the spring server and app
 * ps aux
 * kill -9 PID
 
-Environments:
+## Heroku H14 Error Code:
+
+In terminal run: `$ heroku ps:scale web=1`
+
+Then check to see something is running: `heroku ps`
+
+Heroku error codes: https://devcenter.heroku.com/articles/error-codes#h14-no-web-dynos-running
+
+### Environments:
+
 * Ruby version: 2.2.1-p85 (x86_64-linux)
 * Rails version: 4.2.4
 * RubyGems version 2.4.6
@@ -41,6 +56,9 @@ To add to a repo:
 
 To test:
 `bundle exec rake test `
+
+or Run only one test:
+`$ bundle exec rake test TEST=test/integration/users_login_test.rb`
 
 * System dependencies
 
